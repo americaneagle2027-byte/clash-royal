@@ -1,57 +1,39 @@
-Generate a COMPLETE, WORKING landing page as a SINGLE HTML FILE
-(index.html) using ONLY plain HTML, CSS, and JavaScript.
 
-This page is a CPA marketing landing page designed to unlock a reward
-by redirecting users to a content locker.
-
-STRICT REQUIREMENTS:
-- Output ONLY code
-- No explanations
-- No markdown
-- No comments outside the code
-- Code must be ready to upload to GitHub Pages
-
-PAGE STRUCTURE:
-- Modern, clean, mobile-first design
-- Centered layout
-- Inspired by simple “claim reward” landing pages
-- Fast loading and responsive
-
-CONTENT:
-- Headline: “Unlock Your Reward”
-- Subheadline: “Complete one quick step to access the reward.”
-- A large CTA button labeled: “UNLOCK REWARD”
-- When the CTA button is clicked, REDIRECT the user to:
-  https://attorneycambridge.com/cl/i/4o2dvj
-
-FEATURES TO INCLUDE:
-- Fake progress bar animation (e.g. “Preparing reward…”) before redirect (1–2 seconds)
-- Secondary text explaining: “Offer completion required”
-- Icons or visual cues for trust (checkmarks, lock icon)
-- Footer with small links: Privacy Policy | Terms of Service
-- Subtle hover effects on buttons
-- Smooth animations using CSS only
-
-TECHNICAL:
-- No external libraries or frameworks
-- Use Google Fonts if needed
-- All CSS inside <style>
-- All JavaScript inside <script>
-- Use window.location.href for redirect
-- Ensure mobile compatibility
-
-COMPLIANCE:
-- Do NOT claim official affiliation with any brand or game
-- Do NOT promise guaranteed rewards
-- Clearly indicate an offer must be completed
-
-OUTPUT:
-- FULL HTML DOCUMENT
-- Starts with <!DOCTYPE html>
-- Ends with </html>
-
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Your Reward</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .animate-progress {
+            animation: progress 1.5s ease-in-out forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
     <div id="root"></div>
 </body>
 </html>
-
